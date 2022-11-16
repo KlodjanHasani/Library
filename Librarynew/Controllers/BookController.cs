@@ -17,7 +17,7 @@ namespace Librarynew.Controllers
         // GET: Book
         public ActionResult Index()
         {
-            var books = db.Books.Include(b => b.Author).Include(b => b.Category).Include(b => b.Publisher);
+            var books = db.Books.Include(b => b.Author).Include(b => b.Category).Include(b => b.Publisher); 
             return View(books.ToList());
         }
 
